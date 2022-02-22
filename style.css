@@ -1,0 +1,39 @@
+nav {
+    background-color: rgb(199, 144, 137);
+}
+
+.img-1 {
+    padding: 0px;
+}
+
+blockquote, h1 {
+    color: rgb(199, 144, 137);
+    font-family: 'Satisfy', cursive;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+  
+}
+
+.card {
+    margin: 20px;
+    border: none;
+}
+
+/* Media Query to change grid-container breakpoint */
+
+@media screen and (max-width:576px) {
+    .grid-container{
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (min-width: 576.02px) and (max-width: 768px) {
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+}
+
