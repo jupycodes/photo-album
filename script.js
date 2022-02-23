@@ -14,6 +14,7 @@ $(document).ready(function(){
             text1 += "Username must be at least 6 characters";
             document.getElementById("invalid-username").innerText = text1;
         }
+        validated()
     });
     $('input[name="username"]').focusin(function(){
         $(this).css("border", "1px solid #CED4DA");
@@ -28,6 +29,7 @@ $(document).ready(function(){
             text2 += "Please enter an image title";
             document.getElementById("invalid-title").innerText = text2;
         }
+        validated()
     });
     $('input[name="img-title"]').focusin(function(){
         $(this).css("border", "1px solid #CED4DA");
@@ -42,6 +44,7 @@ $(document).ready(function(){
             text3 += "Please enter a comment";
             document.getElementById("invalid-comment").innerText = text3;
         }
+        validated()
     });
     $('textarea[name=comment]').focusin(function(){
         $(this).css("border", "1px solid #CED4DA");
@@ -54,13 +57,13 @@ $(document).ready(function(){
 });
 
 //enable button once all fields are validated
-//how to apply this to the button?
 function validated() {
         let username = $('input[name="username"]').val();
         let img_title = $('input[name="img-title"]').val();
         let comment = $('textarea[name=comment]').val();
-    
-        if ((username.length >6) && (img_title.length > 1) && (comment.length > 1)) {
-            $('#submitBtn').removeAttr('disabled');
+      
+        if ((username.length >6) && (img_title.length > 0) && (comment.length > 0)) {
+            $('#submitBtn').attr('disabled',false);
+            
         }
     } 
